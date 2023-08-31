@@ -1,0 +1,112 @@
+a {
+  text-decoration: none;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+.font-normal {
+  font-weight: 500;
+}
+.font-pm {
+  font-style: "Montserrat", sans-serif !important;
+}
+.font-sec {
+  font-style: "Fraunces", serif;
+}
+
+.text-lg {
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+  font-size: 30px;
+  margin-right: 2.5rem;
+}
+
+.text-sm {
+  font-size: 13px;
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+
+.btn {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  width: 100%;
+  background: hsl(158, 36%, 37%);
+  text-align: center;
+  padding: 0.7rem 0;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: hsl(30, 38%, 92%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  line-height: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+}
+body .container {
+  overflow: hidden;
+  border-radius: 10px;
+}
+body .container .flex-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 600px;
+}
+body .container .flex-container #section-img {
+  background: url("../images/image-product-desktop.jpg") no-repeat center center/cover;
+}
+body .container .flex-container #section-text {
+  background: hsl(0, 0%, 100%);
+  padding: 2rem;
+}
+body .container .flex-container #section-text > p:first-child {
+  letter-spacing: 0.3rem;
+}
+body .container .flex-container #section-text > h1 {
+  margin: 1.2rem 0;
+  line-height: 2rem;
+  font-family: "Fraunces", serif;
+  color: hsl(212, 21%, 14%);
+  font-size: 36px;
+}
+body .container .flex-container #section-text .prices {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+body .container .flex-container #section-text a img {
+  margin-right: 0.5rem;
+}
+body .attribution {
+  color: hsl(228, 12%, 48%);
+}
+body .attribution a {
+  color: hsl(212, 21%, 14%);
+}
+body .attribution a:hover {
+  color: hsl(158, 36%, 37%);
+}
+
+/*# sourceMappingURL=styles.css.map */
