@@ -54,6 +54,7 @@ a {
 }
 
 body {
+  overflow: hidden;
   background: hsl(30, 38%, 92%);
   display: flex;
   flex-direction: column;
@@ -65,21 +66,50 @@ body {
   color: hsl(228, 12%, 48%);
   font-size: 14px;
 }
+@media only screen and (max-width: 375px) {
+  body {
+    padding: 1rem;
+  }
+}
 body .container {
   overflow: hidden;
-  border-radius: 10px;
 }
 body .container .flex-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 600px;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media only screen and (max-width: 375px) {
+  body .container .flex-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "image" "txt";
+  }
 }
 body .container .flex-container #section-img {
+  border-radius: 10px 0 0 10px;
+  grid-column: 2/span 1;
   background: url("../images/image-product-desktop.jpg") no-repeat center center/cover;
 }
+@media only screen and (max-width: 375px) {
+  body .container .flex-container #section-img {
+    border-radius: 10px 10px 0 0;
+    height: 100px;
+    background: url("../images/image-product-mobile.jpg") no-repeat center top/cover;
+    grid-area: image;
+  }
+}
 body .container .flex-container #section-text {
+  border-radius: 0 10px 10px 0;
+  grid-column: 3/span 1;
   background: hsl(0, 0%, 100%);
   padding: 2rem;
+  overflow: hidden;
+}
+@media only screen and (max-width: 375px) {
+  body .container .flex-container #section-text {
+    border-radius: 0 0 10px 10px;
+    grid-area: txt;
+  }
 }
 body .container .flex-container #section-text > p:first-child {
   letter-spacing: 0.3rem;
